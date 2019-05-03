@@ -102,3 +102,15 @@ document.addEventListener('drop', function(e) {
 // document.addEventListener('DOMContentLoaded', (e) => {
 //   log.textContent = log.textContent + `DOMContentLoaded\n`;
 // });
+
+// focus
+
+const funBus = document.querySelector('.logo-heading');
+
+funBus.addEventListener('click', (e) => {
+  e.target.style.background = 'gold';
+});
+
+funBus.addEventListener('dblclick', (e) => {
+  e.target.style.background = 'white';
+});

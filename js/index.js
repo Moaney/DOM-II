@@ -38,7 +38,7 @@ let scale = 1;
 const el = document.querySelector('.intro img');
 el.onwheel = zoom;
 
-//drag
+//drag + drop
 
 var dragged; 
 document.addEventListener('drag', function(e) {
@@ -78,3 +78,27 @@ document.addEventListener('drop', function(e) {
     e.target.appendChild(dragged);
   }
 }, false);
+
+//load
+
+// const log = document.querySelector('.footer');
+// const loadUp = document.querySelector('.main-navigation');
+
+// loadUp.addEventListener('click', () => {
+//   log.textContent = '';
+//   window.setTimeout(() => {
+//     window.location.reload(true);
+//   }, 200);
+// });
+
+// window.addEventListener('load', (e) => {
+//   log.textContent = log.textContent + 'load\n';
+// });
+
+// document.addEventListener('readystatechange', (e) => {
+//   log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+// });
+
+// document.addEventListener('DOMContentLoaded', (e) => {
+//   log.textContent = log.textContent + `DOMContentLoaded\n`;
+// });

@@ -156,3 +156,17 @@ noContext = document.getElementById('noContext');
 noContext.addEventListener('contextmenu', e => {
   e.preventDefault();
 });
+
+//dblclick
+
+const asides = document.querySelectorAll('aside');
+console.log(asides);
+
+const asidesArr = Array.from(asides);
+console.log(asidesArr);
+
+asidesArr.forEach(aside => {
+  aside.addEventListener('dblclick', function (e) {
+    aside.classList.toggle('large');
+  });
+});

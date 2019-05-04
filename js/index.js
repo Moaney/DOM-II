@@ -114,3 +114,45 @@ funBus.addEventListener('click', (e) => {
 funBus.addEventListener('dblclick', (e) => {
   e.target.style.background = 'white';
 });
+
+//resize
+
+
+const heightOutput = document.querySelector('#height');
+const widthOutput = document.querySelector('#width');
+
+function reportWindowSize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+};
+
+window.oneresize = reportWindowSize;
+
+//scroll
+
+
+let last_known_scroll_position = 0;
+let ticking = false;
+
+function doSomething(scroll_pos) {
+
+}
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+// select
+
+noContext = document.getElementById('noContext');
+noContext.addEventListener('contextmenu', e => {
+  e.preventDefault();
+});

@@ -81,27 +81,9 @@ document.addEventListener('drop', function(e) {
 
 //load
 
-// const log = document.querySelector('.footer');
-// const loadUp = document.querySelector('.main-navigation');
-
-// loadUp.addEventListener('click', () => {
-//   log.textContent = '';
-//   window.setTimeout(() => {
-//     window.location.reload(true);
-//   }, 200);
-// });
-
-// window.addEventListener('load', (e) => {
-//   log.textContent = log.textContent + 'load\n';
-// });
-
-// document.addEventListener('readystatechange', (e) => {
-//   log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
-// });
-
-// document.addEventListener('DOMContentLoaded', (e) => {
-//   log.textContent = log.textContent + `DOMContentLoaded\n`;
-// });
+window.addEventListener('load', (e) => {
+  console.log("Well aren't you special?");
+});
 
 // focus
 
@@ -124,11 +106,12 @@ const widthOutput = document.querySelector('#width');
 function reportWindowSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
-};
+  console.log("window has been resized");
+}
 
-window.oneresize = reportWindowSize;
+window.addEventListener('resize', reportWindowSize);
 
-//scroll
+// scroll
 
 
 let last_known_scroll_position = 0;
